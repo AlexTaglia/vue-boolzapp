@@ -53,6 +53,7 @@
                             </div>
                         </div>
 
+                        <!-- Search -->
                         <div class="search-section">
                             <div class="search-bar d-flex">
                                 <div class="text-gray">
@@ -64,8 +65,9 @@
                             </div>
                         </div>
 
-                        <div class="contacts">
-                            <ul>
+                        <!-- Contacts -->
+                        <div>
+                            <ul  class="contacts d-flex flex-column">
                                 <li v-for="contact in contacts">
                                     <div class="d-inline avatar-container">
                                         <img class="avatar" :src="contact.avatar" alt="avatar">
@@ -97,16 +99,16 @@
                         </div>
                     </div>
                     <!-- Area Message -->
-                    <div class="area-message">
+                    <div class="area-message d-flex flex-column">
 
-                        <div class="d-flex flex-column align-items-end">
+                        <div class="align-self-end">
                             <div class="sent">
                                 <span>Messaggio inviato</span><br>
                                 <span class="date">30/06/2021 14:36:00</span>
                             </div>
                         </div>
 
-                        <div class="d-flex flex-column align-items-end">
+                        <div class="align-self-end">
                             <div class="sent">
                                 <div class="message">
                                     Messaggio inviato
@@ -117,16 +119,20 @@
                             </div>
                         </div>
 
-                        <div class="received">
-                            <div class="message">
-                                Messaggio ricevuto
+                        <div class="align-self-start">
+                            <div class="received">
+                                <div class="message">
+                                    Messaggio ricevuto
+                                </div>
+                                <div class="date">
+                                    30/06/2021 14:37:00
+                                </div>
                             </div>
-                            <div class="date">
-                                30/06/2021 14:37:00
-                            </div>                        </div>
-                        
-
+                        </div>
+                            
                     </div>
+
+                    <!-- Input text -->
                     <div class="text-input-container d-flex justify-content-between align-items-center">
                         <div class="emoticons">
                             <i class="far fa-smile"></i>

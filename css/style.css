@@ -110,8 +110,8 @@ aside .contacts .contact-name{
 
 .side-right .area-message{
     background-image: url(../img/mine.jpg);
-    height: calc(100% - 72px - 72px);
-    overflow: scroll;
+    height: calc(100vh - 72px - 72px - 40px);
+    overflow-y: scroll;
 }
 
 .text-input-container{
