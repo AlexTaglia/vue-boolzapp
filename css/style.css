@@ -3,11 +3,23 @@ body{
     height: 100vh;
 }
 
+.text-gray{
+    color: #b1b1b1;
+}
+
+.avatar{
+    width: 80px;
+    border-radius: 50%;
+}
+
 aside .contacts ul{
     list-style: none;
 }
 
-aside .contacts .avatar{
-    width: 80px;
+aside .user-header{
+    background-color: #eaeaea ;
 }
 
+aside .notification{
+    background-color: #9fd8f8 ;
+}

@@ -23,33 +23,67 @@
 <body>
 
     <div id="app">
-        <div class="container">
+        <div class="container mt-3">
             <!-- Left Side -->
-            <aside>
-                <div class="user">
-
-                </div>
-                <div class="notification">
-
-                </div>
-                <div class="search-bar">
-
-                </div>
-                <div class="contacts">
-                    <ul>
-                        <li v-for="contact in contacts"> 
-                            <div class="d-inline">
-                                <img class="avatar rounded-circle" :src="contact.avatar" alt="avatar">
+            <div class="row">
+                <div class="col-4">
+                    <aside>
+                        <div class="user">
+                            <div class="user-header">
+                                <div class="d-flex justify-content-between">
+                                    <div class="left-avatar">
+                                        <img class="avatar" src="./img/avatar_io.jpg" alt="mio avatar">
+                                        <span>Nome Utente</span>
+                                    </div>
+                                    <div class="rigth-avatar text-gray">
+                                        <i class="fas fa-circle-notch"></i>
+                                        <i class="fas fa-comment-alt"></i>
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <span>
-                                {{contact.name}}
-                            </span>
-                        </li>
-                    </ul>
-                </div>  
-            </aside>
+                        </div>
+                        <div class="notification d-flex">
+                            <div>
+                                <i class="fas fa-bell-slash"></i>
+                            </div>
+                            <div>
+                                <span>Ricevi notifiche di nuovi messaggi</span><br>
+                                <a href="">Attiva notifiche desktop</a>
+                            </div>
+                        </div>
+                        <div class="search-bar d-flex">
+                            <div class="text-gray">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div>
+                                <input placeholder="Cerca o inizia una nuova chat">
+                            </div>
+                        </div>
+                        <div class="contacts">
+                            <ul>
+                                <li v-for="contact in contacts">
+                                    <div class="d-inline">
+                                        <img class="avatar" :src="contact.avatar" alt="avatar">
+                                    </div>
+                                    <span>
+                                        {{contact.name}}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
 
-            <div class="side-right"></div>
+                <!-- Right Side -->
+                <div class="col 8 side-right">
+                </div>
+
+
+
+
+            </div>
+
         </div>
 
 
