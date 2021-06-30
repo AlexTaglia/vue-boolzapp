@@ -105,9 +105,10 @@ aside .contacts .contact-name{
     padding-left: 12px;
 }
 
-.side-right .content-message{
+.side-right .area-message{
     background-image: url(../img/mine.jpg);
     height: calc(100% - 72px - 72px);
+    overflow-y: scroll;
 }
 
 .text-input-container{
@@ -126,4 +127,28 @@ aside .contacts .contact-name{
 
 .text-input-container input{
     border-radius: 6px;
+}
+
+.sent, 
+.received{
+    border-radius: 6px;
+    padding: 6px 24px;
+    margin-top: 24px;
+}
+
+.area-message .sent{
+    background-color: greenyellow;
+    text-align: end;
+    margin-right: 24px;
+}
+
+.area-message .received{
+    display: inline-block;
+    background-color: #fff;
+    margin-left: 24px;
+}
+
+.date{
+    color: gray;
+    font-size: 12px;      
 }
