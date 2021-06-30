@@ -13,6 +13,15 @@ i:hover{
  cursor: pointer;
 }
 
+.user i{
+    font-size: 22px;
+    padding-right: 8px;
+
+}
+.user{
+    padding: 6px;
+}
+
 .text-gray{
     color: #b1b1b1;
 }
@@ -22,18 +31,10 @@ i:hover{
     border-radius: 50%;
 }
 
-aside{
+aside, .side-right{
     background-color: #eaeaea ;
 }
 
-aside .user{
-    padding: 6px;
-}
-
-aside .user i{
-    font-size: 22px;
-    padding-right: 6px;
-}
 
 aside .notification{
     background-color: #9fd8f8;
@@ -91,4 +92,9 @@ aside .contacts li:last-child{
 aside .contacts .contact-name{
     vertical-align: top;
     padding-left: 12px;
+}
+
+.side-right .content-message{
+    background-image: url(../img/mine.jpg);
+    height: calc(100% - 72px - 72px);
 }
