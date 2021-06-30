@@ -1,0 +1,13 @@
+body{
+    background: linear-gradient(#419387 15%, #d9dbd6 15%); 
+    height: 100vh;
+}
+
+aside .contacts ul{
+    list-style: none;
+}
+
+aside .contacts .avatar{
+    width: 80px;
+}
+
