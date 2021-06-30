@@ -57,7 +57,7 @@ aside .notification .bell-container{
     background-color: #fff;
     color: #9fd8f8;
     font-size: 22px;
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     border-radius: 50%;
     text-align: center;

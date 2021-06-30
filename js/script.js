@@ -17,7 +17,7 @@ new Vue(
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: './img/avatar_1.jpg',
+                    // avatar: './img/avatar_1.jpg',
                     visible: true,
                     messages: [
                         {
@@ -39,7 +39,7 @@ new Vue(
                 },
                 {
                     name: 'Fabio',
-                    avatar: './img/avatar_2.jpg',
+                    // avatar: './img/avatar_2.jpg',
                     visible: true,
                     messages: [
                         {
@@ -61,7 +61,7 @@ new Vue(
                 },
                 {
                     name: 'Samuele',
-                    avatar: './img/avatar_3.jpg',
+                    // avatar: './img/avatar_3.jpg',
                     visible: true,
                     messages: [
                         {
@@ -83,7 +83,7 @@ new Vue(
                 },
                 {
                     name: 'Luisa',
-                    avatar: './img/avatar_4.jpg',
+                    // avatar: './img/avatar_4.jpg',
                     visible: true,
                     messages: [
                         {
@@ -101,6 +101,13 @@ new Vue(
             ]
 
         }, //fine data
-    
+
+        methods: {
+            
+            // Aggiunto img avatar 
+            pathAvatar: function(index){
+                return `./img/avatar_${index + 1}.jpg`
+            },
+        }
     }
 )

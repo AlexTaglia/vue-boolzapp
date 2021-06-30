@@ -68,9 +68,9 @@
                         <!-- Contacts -->
                         <div>
                             <ul  class="contacts d-flex flex-column">
-                                <li v-for="contact in contacts">
+                                <li v-for="(contact, index) in contacts">
                                     <div class="d-inline avatar-container">
-                                        <img class="avatar" :src="contact.avatar" alt="avatar">
+                                        <img class="avatar" :src="pathAvatar(index)" alt="avatar">
                                     </div>
                                     <span class="contact-name">
                                         {{contact.name}}
