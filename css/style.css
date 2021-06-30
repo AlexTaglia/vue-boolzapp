@@ -87,7 +87,10 @@ input{
 }
 
 aside .contacts {
+    height: calc(100vh - 66px - 72px - 50px - 40px);
     padding: 6px;
+    overflow-y: auto;
+
 }
 
 aside .contacts li{
@@ -108,7 +111,7 @@ aside .contacts .contact-name{
 .side-right .area-message{
     background-image: url(../img/mine.jpg);
     height: calc(100% - 72px - 72px);
-    overflow-y: scroll;
+    overflow: scroll;
 }
 
 .text-input-container{
