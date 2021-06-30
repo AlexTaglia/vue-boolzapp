@@ -6,6 +6,11 @@ body{
 ul{
     padding: 0;
     margin: 0;
+    list-style: none;
+}
+
+i:hover{
+ cursor: pointer;
 }
 
 .text-gray{
@@ -21,12 +26,30 @@ aside{
     background-color: #eaeaea ;
 }
 
-aside .contacts ul{
-    list-style: none;
+aside .user{
+    padding: 6px;
+}
+
+aside .user i{
+    font-size: 22px;
+    padding-right: 6px;
 }
 
 aside .notification{
-    background-color: #9fd8f8 ;
+    background-color: #9fd8f8;
+    padding: 12px;
+}
+
+aside .notification .bell-container{
+    background-color: #fff;
+    color: #9fd8f8;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 12px;
 }
 
 aside .search-section{
@@ -46,6 +69,7 @@ aside .search-bar .fa-search{
 
 aside .search-bar input{
     width: 100%;
+    flex-grow: 1;
     border: none;
     line-height: 50px;
 }
@@ -62,4 +86,9 @@ aside .contacts li{
 }
 aside .contacts li:last-child{
     border-bottom: none;
+}
+
+aside .contacts .contact-name{
+    vertical-align: top;
+    padding-left: 12px;
 }

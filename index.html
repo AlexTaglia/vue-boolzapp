@@ -23,7 +23,7 @@
 <body>
 
     <div id="app">
-        <div class="container mt-3">
+        <div class="container pt-3">
             <!-- Left Side -->
             <div class="row">
                 <div class="col-6 col-md-5 col-lg-4">
@@ -43,8 +43,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="notification d-flex">
-                            <div>
+                        <div class="notification d-flex align-items-center">
+                            <div class="bell-container">
                                 <i class="fas fa-bell-slash"></i>
                             </div>
                             <div>
@@ -68,7 +68,7 @@
                                     <div class="d-inline avatar-container">
                                         <img class="avatar" :src="contact.avatar" alt="avatar">
                                     </div>
-                                    <span>
+                                    <span class="contact-name">
                                         {{contact.name}}
                                     </span>
                                 </li>
