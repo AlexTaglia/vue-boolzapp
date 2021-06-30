@@ -14,10 +14,14 @@ i:hover{
 }
 
 .user i{
-    font-size: 22px;
     padding-right: 8px;
-
 }
+
+.user i,
+.text-input-container i{
+    font-size: 22px;
+}
+
 .user{
     padding: 6px;
 }
@@ -29,6 +33,14 @@ i:hover{
 .avatar{
     width: 60px;
     border-radius: 50%;
+}
+
+.user .avatar{
+    padding-left: 6px;
+}
+
+aside .user {
+    border-right: 1px solid #c2c2c2 ; 
 }
 
 aside, .side-right{
@@ -68,9 +80,8 @@ aside .search-bar .fa-search{
     padding: 0 12px;
 }
 
-aside .search-bar input{
+input{
     width: 100%;
-    flex-grow: 1;
     border: none;
     line-height: 50px;
 }
@@ -97,4 +108,22 @@ aside .contacts .contact-name{
 .side-right .content-message{
     background-image: url(../img/mine.jpg);
     height: calc(100% - 72px - 72px);
+}
+
+.text-input-container{
+    padding: 12px;
+    background-color: #f2eeeaf3;
+}
+
+.text-input-container{
+    padding: 12px 0;
+}
+
+.text-input-container i{
+    color: gray;
+    padding: 0 24px;
+}
+
+.text-input-container input{
+    border-radius: 6px;
 }
