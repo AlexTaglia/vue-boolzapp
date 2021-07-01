@@ -68,7 +68,7 @@
                         <!-- Contacts -->
                         <div>
                             <ul class="contacts d-flex flex-column">
-                                <li v-for="(contact, index) in contacts">
+                                <li @click="userSelected(index)" v-for="(contact, index) in contacts">
                                     <div class="d-inline avatar-container">
                                         <img class="avatar" :src="pathAvatar(index)" alt="avatar">
                                     </div>
@@ -87,8 +87,8 @@
                         <div class="user-header">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="left-avatar">
-                                    <img class="avatar" src="./img/avatar_1.jpg" alt="avatar">
-                                    <span>{{contacts[0].name}}</span>
+                                    <img class="avatar" :src="pathAvatar(selectedContact)" alt="avatar">
+                                    <span>{{contacts[selectedContact].name}}</span>
                                 </div>
                                 <div class="rigth-avatar text-gray">
                                     <i class="fas fa-search"></i>
@@ -101,7 +101,7 @@
                     <!-- Area Message -->
                     <div class="area-message d-flex flex-column">
 
-                        <div v-for="message in contacts[0].messages" :class="message.status">
+                        <div v-for="message in contacts[selectedContact].messages" :class="message.status">
                             <div class="message">
                                 {{message.text}}
                             </div>
@@ -110,26 +110,6 @@
                             </div>
                         </div>
                         
-                        <!-- 
-                            <div class="sent">
-                                <div class="message">
-                                    Messaggio inviato
-                                </div>
-                                <div class="date">
-                                    30/06/2021 14:36:00
-                                </div>
-                            </div>
-                            
-                            <div class="received">
-                                <div class="message">
-                                    Messaggio ricevuto
-                                </div>
-                                <div class="date">
-                                    30/06/2021 14:37:00
-                                </div>
-                            </div>
-                        -->
-
                     </div>
 
                     <!-- Input text -->

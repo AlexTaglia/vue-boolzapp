@@ -6,6 +6,7 @@ new Vue(
 
         // -----------------------------
         data: {
+            selectedContact: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -100,6 +101,11 @@ new Vue(
             pathAvatar: function(index){
                 return `./img/avatar_${index + 1}.jpg`
             },
+
+            //selezione contatto per mostrare chat
+            userSelected: function(index){
+                this.selectedContact = index
+            }
         }
     }
 )
