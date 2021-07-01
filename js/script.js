@@ -113,10 +113,21 @@ new Vue(
                 this.contacts[index].messages.push({
                     date: '20/03/2020 16:30:00',
                     text: this.newMessage,
-                    status: 'sent'
+                    status: 'sent',
                 })
                 this.newMessage= '';
             },
+
+            //Aggiunta risposta automatica
+            replyMessage: function(index){
+                setTimeout (()=>{
+                    this.contacts[index].messages.push({
+                        date: '20/03/2020 16:30:00',
+                        text: 'ok',
+                        status: 'received'
+                    })
+                },1000)
+            }
 
         }
     }
