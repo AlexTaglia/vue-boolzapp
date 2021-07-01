@@ -132,6 +132,14 @@ aside .contacts .contact-name{
     border-radius: 6px;
 }
 
+.sent{
+    align-self: flex-end;
+}
+
+.received{
+    align-self: flex-start;
+}
+
 .sent, 
 .received{
     border-radius: 6px;
