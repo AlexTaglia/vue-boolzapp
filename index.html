@@ -72,7 +72,8 @@
                             <ul class="contacts d-flex flex-column">
                                 <li @click="userSelected(index)" 
                                     v-for="(contact, index) in contacts"
-                                    v-if="contact.visible">
+                                    v-if="contact.visible"
+                                    :class="currentContact(index)">
                                     <div class="d-inline avatar-container">
                                         <img class="avatar" :src="pathAvatar(index)" alt="avatar">
                                     </div>

@@ -225,6 +225,15 @@ new Vue(
                     }
                 });
             },
+
+            //il contatto seleziomnato ha un background piu scuro
+            currentContact: function(index){
+                if(this.selectedContact === index){
+                    return 'selected-contact'
+                } else {
+                    return '';
+                }
+            }
         }
     }
 )

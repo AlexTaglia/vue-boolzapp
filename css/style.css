@@ -93,7 +93,7 @@ aside .contacts {
 
 }
 
-aside .contacts li{
+li{
     height: 80px;
     background-color: #fff;
     padding: 6px;
@@ -160,10 +160,10 @@ aside .contacts .contact-name{
 }
 
 .date{
-    color: gray;
+    color: #808080;
     font-size: 12px;      
 }
 
-.selectedContact{
-    background-color: gray;
+.selected-contact{
+    background-color: #e4e3e3 ;
 }
