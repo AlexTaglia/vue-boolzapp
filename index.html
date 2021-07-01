@@ -60,7 +60,9 @@
                                     <i class="fas fa-search"></i>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <input placeholder="Cerca o inizia una nuova chat">
+                                    <input v-model="searchContact"
+                                           @keyup="filterContacts()"
+                                           placeholder="Cerca o inizia una nuova chat">
                                 </div>
                             </div>
                         </div>
@@ -68,7 +70,9 @@
                         <!-- Contacts -->
                         <div>
                             <ul class="contacts d-flex flex-column">
-                                <li @click="userSelected(index)" v-for="(contact, index) in contacts">
+                                <li @click="userSelected(index)" 
+                                    v-for="(contact, index) in contacts"
+                                    v-if="contact.visible">
                                     <div class="d-inline avatar-container">
                                         <img class="avatar" :src="pathAvatar(index)" alt="avatar">
                                     </div>
@@ -109,7 +113,7 @@
                                 {{message.date}}
                             </div>
                         </div>
-                        
+
                     </div>
 
                     <!-- Input text -->
@@ -118,7 +122,9 @@
                             <i class="far fa-smile"></i>
                         </div>
                         <div class="flex-grow-1 ">
-                            <input @keyup.enter="addMessage(selectedContact); replyMessage(selectedContact)"  v-model="newMessage" placeholder="Scrivi un messaggio">
+                            <input v-model="newMessage"
+                                   @keyup.enter="addMessage(selectedContact); replyMessage(selectedContact)" 
+                                   placeholder="Scrivi un messaggio">
                         </div>
                         <div>
                             <i class="fas fa-microphone"></i>

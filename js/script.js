@@ -8,6 +8,7 @@ new Vue(
         data: {
             selectedContact: 0,
             newMessage: '',
+            searchContact: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -115,18 +116,31 @@ new Vue(
                     text: this.newMessage,
                     status: 'sent',
                 })
-                this.newMessage= '';
+                this.newMessage = '';
             },
 
             //Aggiunta risposta automatica
-            replyMessage: function(index){
-                setTimeout (()=>{
+            replyMessage: function (index) {
+                setTimeout(() => {
                     this.contacts[index].messages.push({
                         date: '20/03/2020 16:30:00',
                         text: 'ok',
                         status: 'received'
                     })
-                },1000)
+                }, 1000)
+            },
+
+            //Creo filtro per i contatti
+            filterContacts: function () {
+                this.contacts.forEach((contact) => {
+                    let contact_name = contact.name.toLowerCase();
+
+                    if (contact_name.includes(this.searchContact.toLowerCase())) {
+                        contact.visible = true;
+                    } else {
+                        contact.visible = false;
+                    }
+                });
             }
 
         }
