@@ -101,32 +101,34 @@
                     <!-- Area Message -->
                     <div class="area-message d-flex flex-column">
 
-                        <div class="sent">
+                        <div v-for="message in contacts[0].messages" :class="message.status">
                             <div class="message">
-                                Messaggio inviato
+                                {{message.text}}
                             </div>
                             <div class="date">
-                                30/06/2021 14:36:00
+                                {{message.date}}
                             </div>
                         </div>
-
-                        <div class="sent">
-                            <div class="message">
-                                Messaggio inviato
+                        
+                        <!-- 
+                            <div class="sent">
+                                <div class="message">
+                                    Messaggio inviato
+                                </div>
+                                <div class="date">
+                                    30/06/2021 14:36:00
+                                </div>
                             </div>
-                            <div class="date">
-                                30/06/2021 14:36:00
+                            
+                            <div class="received">
+                                <div class="message">
+                                    Messaggio ricevuto
+                                </div>
+                                <div class="date">
+                                    30/06/2021 14:37:00
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="received">
-                            <div class="message">
-                                Messaggio ricevuto
-                            </div>
-                            <div class="date">
-                                30/06/2021 14:37:00
-                            </div>
-                        </div>
+                        -->
 
                     </div>
 
