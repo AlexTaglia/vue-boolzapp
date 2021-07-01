@@ -118,7 +118,7 @@
                             <i class="far fa-smile"></i>
                         </div>
                         <div class="flex-grow-1 ">
-                            <input placeholder="Scrivi un messaggio">
+                            <input @keyup.enter="addMessage()" v-model="newMessage" placeholder="Scrivi un messaggio">
                         </div>
                         <div>
                             <i class="fas fa-microphone"></i>

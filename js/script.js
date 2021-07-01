@@ -7,6 +7,7 @@ new Vue(
         // -----------------------------
         data: {
             selectedContact: 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -96,16 +97,26 @@ new Vue(
         }, //fine data
 
         methods: {
-            
+
             // Aggiunto img avatar 
-            pathAvatar: function(index){
+            pathAvatar: function (index) {
                 return `./img/avatar_${index + 1}.jpg`
             },
 
             //selezione contatto per mostrare chat
-            userSelected: function(index){
+            userSelected: function (index) {
                 this.selectedContact = index
-            }
+            },
+
+            //Aggiunge un messaggio
+            addMessage: function () {
+                this.contacts[0].messages.push({
+                    date: '20/03/2020 16:30:00',
+                    text: this.newMessage,
+                    status: 'sent'
+                })
+            },
+
         }
     }
 )
