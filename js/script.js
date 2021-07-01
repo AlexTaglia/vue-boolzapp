@@ -109,12 +109,13 @@ new Vue(
             },
 
             //Aggiunge un messaggio
-            addMessage: function () {
-                this.contacts[0].messages.push({
+            addMessage: function (index) {
+                this.contacts[index].messages.push({
                     date: '20/03/2020 16:30:00',
                     text: this.newMessage,
                     status: 'sent'
                 })
+                this.newMessage= '';
             },
 
         }
