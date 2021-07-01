@@ -163,3 +163,7 @@ aside .contacts .contact-name{
     color: gray;
     font-size: 12px;      
 }
+
+.selectedContact{
+    background-color: gray;
+}
