@@ -220,6 +220,7 @@ new Vue(
                     date: this.getCurrentDateTime(),
                     text: this.newMessage,
                     status: 'sent',
+                    hideShowClass: 'hidden'
                 })
                 this.newMessage = '';
             },
@@ -230,7 +231,8 @@ new Vue(
                     this.contacts[index].messages.push({
                         date: this.getCurrentDateTime(),
                         text: 'ok',
-                        status: 'received'
+                        status: 'received',
+                        hideShowClass: 'hidden'
                     })
                 }, 1000)
             },
