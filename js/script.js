@@ -223,6 +223,7 @@ new Vue(
                     hideShowClass: 'hidden'
                 })
                 this.newMessage = '';
+                //this.scrollToEnd();
             },
 
             //Aggiunta risposta automatica
@@ -235,6 +236,7 @@ new Vue(
                         hideShowClass: 'hidden'
                     })
                 }, 1000)
+                //this.scrollToEnd();
             },
 
             //Creo filtro per i contatti
@@ -278,6 +280,27 @@ new Vue(
                     this.contacts[this.selectedContact].messages[index].hideShowClass = 'hidden';
                 }
             },
+
+            //prendo la data dell'ultimo messaggio
+            getLastDate: function (index) {
+                let length = ((this.contacts[index].messages).length) - 1
+                return this.contacts[index].messages[length].date
+            },
+
+            //pendo l'ultimo dell'ultimo messaggio
+            getLastMessage: function (index) {
+                let length = ((this.contacts[index].messages).length) - 1
+                return this.contacts[index].messages[length].text
+            },
+            
+            /* -----------------------toDo-------------------
+            scrollToEnd: function() {  
+                const container = this.$el.querySelector("#area-scroll");
+                container.scrollTop = container.scrollHeight
+              },
+            */
+
+
         }
     }
 )
