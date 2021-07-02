@@ -195,7 +195,7 @@ new Vue(
             //Aggiunge un messaggio
             addMessage: function (index) {
                 this.contacts[index].messages.push({
-                    date: '20/03/2020 16:30:00',
+                    date: this.getCurrentDateTime(),
                     text: this.newMessage,
                     status: 'sent',
                 })
@@ -206,7 +206,7 @@ new Vue(
             replyMessage: function (index) {
                 setTimeout(() => {
                     this.contacts[index].messages.push({
-                        date: '20/03/2020 16:30:00',
+                        date: this.getCurrentDateTime(),
                         text: 'ok',
                         status: 'received'
                     })
@@ -233,6 +233,12 @@ new Vue(
                 } else {
                     return '';
                 }
+            },
+
+            //Genero la data e ora attuale
+            getCurrentDateTime: function(){
+                const dateTimeNow = dayjs();
+                return dateTimeNow.format('DD/MM/YYYY HH:mm:ss')
             }
         }
     }
