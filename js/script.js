@@ -226,9 +226,9 @@ new Vue(
                 });
             },
 
-            //il contatto seleziomnato ha un background piu scuro
-            currentContact: function(index){
-                if(this.selectedContact === index){
+            //il contatto selezionato ha un background piu scuro
+            currentContact: function (index) {
+                if (this.selectedContact === index) {
                     return 'selected-contact'
                 } else {
                     return '';
@@ -236,10 +236,15 @@ new Vue(
             },
 
             //Genero la data e ora attuale
-            getCurrentDateTime: function(){
+            getCurrentDateTime: function () {
                 const dateTimeNow = dayjs();
                 return dateTimeNow.format('DD/MM/YYYY HH:mm:ss')
-            }
+            },
+
+            //Eliminare messaggio
+            deleteMessage: function (index) {
+                this.contacts[this.selectedContact].messages.splice(index, 1)
+            },
         }
     }
 )
