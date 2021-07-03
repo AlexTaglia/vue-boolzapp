@@ -223,7 +223,7 @@ new Vue(
                     hideShowClass: 'hidden'
                 })
                 this.newMessage = '';
-                //this.scrollToEnd();
+                this.scrollToEnd();
             },
 
             //Aggiunta risposta automatica
@@ -236,7 +236,7 @@ new Vue(
                         hideShowClass: 'hidden'
                     })
                 }, 1000)
-                //this.scrollToEnd();
+                this.scrollToEnd();
             },
 
             //Creo filtro per i contatti
@@ -293,12 +293,14 @@ new Vue(
                 return this.contacts[index].messages[length].text
             },
             
-            /* -----------------------toDo-------------------
-            scrollToEnd: function() {  
-                const container = this.$el.querySelector("#area-scroll");
-                container.scrollTop = container.scrollHeight
+            //Scoll bottom 
+            scrollToEnd: function() { 
+                setTimeout(()=>{
+                    const container = this.$el.querySelector("#area-scroll");
+                    container.scrollTop = container.scrollHeight
+                },1001) 
               },
-            */
+            
 
 
         }
